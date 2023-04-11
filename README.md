@@ -2,8 +2,10 @@
 ### Summary
 - User remains in invalid authentication state (zombie state)
 ### Steps to repro
-- Click the `EMAIL/PW` button
-- Click the `ANONYMOUSLY` button
+- Open app
+- The FirebaseUser state must be currently anon user.
+- Click the `EMAIL/PW` button to sign in as a registered user
+- Click the `ANONYMOUSLY` button > this will trigger the zombie state.
 ### Expected Behavior
 - Since the user is already signed in, anonymous sign in should not work.
 ### Actual Behavior
